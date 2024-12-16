@@ -1,0 +1,25 @@
+# InteliJ
+**/.idea/
+**/.idea/*
+
+# Local terraform modules and state
+**/.terraform/
+**/.terraform/*
+**/.terraform.lock.hcl
+
+**/.tflint.hcl
+
+**/*_override.tf
+
+**/*.tfplan
+**/*.tfstate*
+
+# override tf files specifically for local testing
+**/*.test.tf
+**/*.test.tfvars
+
+# Any local resources needed for testing
+**/test-resources
+
+# Windows meta data
+**/.DS_Store
