@@ -57,7 +57,7 @@ resource "aws_subnet" "private_subnets" {
 # SECURITY GROUPS #
 
 resource "aws_security_group" "ec2_sg1" {
-  name = "${local.naming_prefix}-sg1"
+  name   = "${local.naming_prefix}-sg1"
   vpc_id = aws_vpc.main.id
 
   # SSH access from anywhere

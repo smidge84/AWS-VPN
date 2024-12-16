@@ -11,3 +11,8 @@ data "aws_ssm_parameter" "amzn2_linux" {
 data "aws_availability_zones" "available" {
   state = "available"
 }
+
+# Read in SSH public key for EC2 instance access
+data "local_file" "ec2_pub_key" {
+  filename = "data/aws_ec2_key.pub"
+}
