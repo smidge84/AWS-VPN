@@ -2,31 +2,6 @@
 # NETWORKING RESOURCES
 ##################################################################################
 
-# module "app" {
-#   source  = "terraform-aws-modules/vpc/aws"
-#   version = "5.12.0"
-
-#   cidr = var.vpc_cidr_block
-
-#   azs            = slice(data.aws_availability_zones.available.names, 0, var.public_subnet_count)
-#   public_subnets = [for subnet in range(var.public_subnet_count) : cidrsubnet(var.vpc_cidr_block, 8, subnet)]
-
-#   enable_nat_gateway      = false
-#   enable_vpn_gateway      = false
-#   enable_dns_hostnames    = var.enable_dns_hostnames
-#   map_public_ip_on_launch = var.map_public_ip_on_launch
-
-#   tags = {
-#     Terratags = merge(
-#       local.global_tags,
-#       {
-#         Name = "${local.naming_prefix}-vpc"
-#       }
-#     )
-#   }
-# }
-
-
 # VPC #
 
 resource "aws_vpc" "main" {
@@ -56,8 +31,9 @@ resource "aws_subnet" "private_subnets" {
 
 # SECURITY GROUPS #
 
+# Security Group for EC2 instances
 resource "aws_security_group" "ec2_sg1" {
-  name   = "${local.naming_prefix}-sg1"
+  name   = "${local.naming_prefix}-sg-ec2s"
   vpc_id = aws_vpc.main.id
 
   # SSH access from anywhere
@@ -76,5 +52,48 @@ resource "aws_security_group" "ec2_sg1" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = local.global_tags
+  tags = merge(local.global_tags, {
+    Name = "${local.naming_prefix}-sg-ec2s"
+  })
+}
+
+# Seciruty group for EC2 instance connect endpoint
+resource "aws_security_group" "ec2_ic_sg1" {
+  name   = "${local.naming_prefix}-sg-ec2-ic"
+  vpc_id = aws_vpc.main.id
+
+  # Outbound SSH traffic to instances on other SG
+  egress {
+    from_port       = 22
+    to_port         = 22
+    protocol        = "tcp"
+    security_groups = [aws_security_group.ec2_sg1.id]
+  }
+
+  # Inbound all traffic
+  ingress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = merge(local.global_tags, {
+    Name = "${local.naming_prefix}-sg-ec2-ic"
+  })
+}
+
+
+
+# AWS Instance Connect private endpoints #
+# So we can connect to the EC2 insances throught the AWS console #
+
+resource "aws_ec2_instance_connect_endpoint" "ec2_ic_endpoint" {
+  count              = length(aws_subnet.private_subnets)
+  subnet_id          = aws_subnet.private_subnets[count.index].id
+  security_group_ids = [aws_security_group.ec2_ic_sg1.id]
+
+  tags = merge(local.global_tags, {
+    Name = "${local.naming_prefix}-ec2-ic-endpoint-${count.index}"
+  })
 }
