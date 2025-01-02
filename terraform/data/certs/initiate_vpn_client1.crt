@@ -1,0 +1,85 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            07:7c:e9:b0:07:03:e2:e9:d8:2b:ec:69:6f:2c:05:9c
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN=Initiate Training VPN CA
+        Validity
+            Not Before: Jan  2 13:57:45 2025 GMT
+            Not After : Apr  7 13:57:45 2027 GMT
+        Subject: CN=initiate_vpn_client1
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:b5:78:4a:67:f4:d9:92:25:da:f2:78:61:9f:9c:
+                    e0:bc:da:7b:e9:fc:6f:a4:ce:f6:ee:2e:0b:f2:a8:
+                    26:3b:a6:a8:6b:47:2c:61:03:9d:7f:75:ec:38:f9:
+                    ad:05:aa:1a:56:56:00:fb:73:85:cd:96:d0:58:95:
+                    a9:77:62:d8:27:0d:52:54:20:1b:37:96:98:fd:68:
+                    cc:e1:93:80:b9:f2:e1:cf:fe:1c:d8:8e:d8:b6:b4:
+                    9b:63:21:97:af:1a:cd:56:e3:50:c1:4c:73:0a:61:
+                    f7:0c:c7:99:d6:aa:84:13:7b:6f:c6:e6:e2:c9:4d:
+                    a7:2a:7d:c3:d6:6e:3b:61:71:60:57:10:1d:7d:50:
+                    e4:e8:c1:5a:28:1d:ec:b5:80:b5:65:ff:5f:ea:57:
+                    2b:a2:4c:54:16:4f:03:6d:61:52:da:72:0f:0c:f9:
+                    7c:0a:b6:e2:b5:c6:67:11:bf:0c:49:59:f4:65:2d:
+                    90:e6:c3:1a:8e:a4:b8:b0:54:d5:6e:7f:66:ce:86:
+                    43:81:ae:63:28:51:64:3a:68:91:aa:19:92:52:f4:
+                    a8:6c:56:cf:a4:6a:63:71:54:63:bf:7e:6d:a8:09:
+                    c2:0a:7a:2e:2a:79:54:3f:6b:74:ae:06:f6:20:00:
+                    00:74:f3:f6:41:c9:23:05:1b:10:95:cb:73:95:69:
+                    8a:1d
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                47:92:23:E4:2A:7E:A3:BA:BF:65:C8:99:3A:EA:98:38:22:E7:F0:B3
+            X509v3 Authority Key Identifier: 
+                keyid:66:13:8A:9C:A4:E6:44:EB:55:F4:24:61:E9:82:28:1D:1A:1D:E5:B2
+                DirName:/CN=Initiate Training VPN CA
+                serial:32:FA:A8:21:6B:71:09:48:01:8B:06:28:66:4A:12:AA:6D:AD:B5:BE
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        83:73:4a:b6:d5:7e:61:a8:cb:99:fd:39:30:c0:3f:a3:c8:c2:
+        94:56:77:88:da:26:21:09:23:92:36:1a:c0:ca:7d:3c:11:20:
+        ed:b9:a9:e0:6c:0a:6f:d0:50:50:07:d0:8f:ea:db:2f:a1:bf:
+        0f:61:9d:3f:0c:d4:a5:ca:d8:e8:30:a6:8c:f5:7d:ca:25:ee:
+        6e:f6:26:aa:62:ad:e9:cf:6e:e5:28:a7:7c:00:e6:f9:05:7f:
+        38:97:88:fd:d5:af:24:c7:e5:41:5e:cf:15:9f:e0:15:9a:07:
+        1a:99:a1:cd:6e:27:10:a9:75:42:c5:f6:78:d4:88:31:87:4d:
+        04:3d:6b:1c:60:d9:7e:60:3c:00:3a:62:fa:0c:46:15:22:9e:
+        fb:2a:12:f4:03:09:b7:e9:5e:4c:b3:51:33:66:83:13:ac:d1:
+        9a:57:0e:aa:90:0c:e2:04:4b:6e:0c:ff:06:41:3d:02:6c:70:
+        6c:f0:4a:1d:df:96:5f:02:ca:7b:e8:b8:c4:f1:ca:6e:73:26:
+        74:5f:f6:3a:78:e8:eb:5f:8b:8e:c6:a0:4d:2d:80:3f:e7:6b:
+        de:a5:43:9c:b9:54:06:82:9d:7e:91:df:a7:46:d8:a1:06:bb:
+        4e:65:b1:89:da:59:5d:37:9e:dd:e2:71:82:b7:86:78:7e:f3:
+        f0:2e:b3:5d
+-----BEGIN CERTIFICATE-----
+MIIDfDCCAmSgAwIBAgIQB3zpsAcD4unYK+xpbywFnDANBgkqhkiG9w0BAQsFADAj
+MSEwHwYDVQQDDBhJbml0aWF0ZSBUcmFpbmluZyBWUE4gQ0EwHhcNMjUwMTAyMTM1
+NzQ1WhcNMjcwNDA3MTM1NzQ1WjAfMR0wGwYDVQQDDBRpbml0aWF0ZV92cG5fY2xp
+ZW50MTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALV4Smf02ZIl2vJ4
+YZ+c4Lzae+n8b6TO9u4uC/KoJjumqGtHLGEDnX917Dj5rQWqGlZWAPtzhc2W0FiV
+qXdi2CcNUlQgGzeWmP1ozOGTgLny4c/+HNiO2La0m2Mhl68azVbjUMFMcwph9wzH
+mdaqhBN7b8bm4slNpyp9w9ZuO2FxYFcQHX1Q5OjBWigd7LWAtWX/X+pXK6JMVBZP
+A21hUtpyDwz5fAq24rXGZxG/DElZ9GUtkObDGo6kuLBU1W5/Zs6GQ4GuYyhRZDpo
+kaoZklL0qGxWz6RqY3FUY79+bagJwgp6Lip5VD9rdK4G9iAAAHTz9kHJIwUbEJXL
+c5Vpih0CAwEAAaOBrzCBrDAJBgNVHRMEAjAAMB0GA1UdDgQWBBRHkiPkKn6jur9l
+yJk66pg4IufwszBeBgNVHSMEVzBVgBRmE4qcpOZE61X0JGHpgigdGh3lsqEnpCUw
+IzEhMB8GA1UEAwwYSW5pdGlhdGUgVHJhaW5pbmcgVlBOIENBghQy+qgha3EJSAGL
+BihmShKqba21vjATBgNVHSUEDDAKBggrBgEFBQcDAjALBgNVHQ8EBAMCB4AwDQYJ
+KoZIhvcNAQELBQADggEBAINzSrbVfmGoy5n9OTDAP6PIwpRWd4jaJiEJI5I2GsDK
+fTwRIO25qeBsCm/QUFAH0I/q2y+hvw9hnT8M1KXK2Ogwpoz1fcol7m72JqpirenP
+buUop3wA5vkFfziXiP3VryTH5UFezxWf4BWaBxqZoc1uJxCpdULF9njUiDGHTQQ9
+axxg2X5gPAA6YvoMRhUinvsqEvQDCbfpXkyzUTNmgxOs0ZpXDqqQDOIES24M/wZB
+PQJscGzwSh3fll8CynvouMTxym5zJnRf9jp46Otfi47GoE0tgD/na96lQ5y5VAaC
+nX6R36dG2KEGu05lsYnaWV03nt3icYK3hnh+8/Aus10=
+-----END CERTIFICATE-----
