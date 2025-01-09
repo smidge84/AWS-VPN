@@ -2,7 +2,7 @@
 # EC2 INSTANCE RESOURCES
 ##################################################################################
 
-resource "aws_instance" "nginx_instance" {
+resource "aws_instance" "ec2_instance" {
   count                  = var.ec2_instance_count
   ami                    = nonsensitive(data.aws_ssm_parameter.amzn2_linux.value)
   instance_type          = var.ec2_instance_type
@@ -13,7 +13,7 @@ resource "aws_instance" "nginx_instance" {
   tags = merge(
     local.global_tags,
     {
-      Name = "${local.naming_prefix}-nginx-${count.index}"
+      Name = "${local.naming_prefix}-ec2-${count.index}"
     }
   )
 }
